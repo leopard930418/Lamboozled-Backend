@@ -4,8 +4,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const axios = require("axios").default;
 const bodyParser = require("body-parser");
-// const EthLFloorModel = require("./models/EthLFloor");
-// const GenLFloorModel = require("./models/GenLFloor");
+
 
 // Connect mongoDB
 mongoose.set('strictQuery', false);
@@ -24,10 +23,7 @@ mongoose
     console.error("Error connecting to mongo", err.reason);
   });
 
-// const ethFloorAPI = require("./routes/ethLFloor.route");
-// const genFloorAPI = require("./routes/genLFloor.route");
-// const councilAPI = require("./routes/council.route");
-// const investAPI = require("./routes/invest.route");
+
 
 const registerAPI = require("./routes/register.route");
 const historyAPI = require("./routes/history.route");
@@ -43,11 +39,7 @@ const buildPath = path.join(__dirname, "..", "dist");
 app.use(express.static(buildPath));
 app.use(cors());
 
-// API
-// app.use("/ethLFloor", ethFloorAPI);
-// app.use("/genLFloor", genFloorAPI);
-// app.use("/council", councilAPI);
-// app.use("/invest", investAPI);
+
 
 app.use("/register", registerAPI);
 app.use("/history", historyAPI);
