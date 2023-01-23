@@ -24,10 +24,7 @@ mongoose
     console.error("Error connecting to mongo", err.reason);
   });
 
-// const ethFloorAPI = require("./routes/ethLFloor.route");
-// const genFloorAPI = require("./routes/genLFloor.route");
-// const councilAPI = require("./routes/council.route");
-// const investAPI = require("./routes/invest.route");
+
 
 const registerAPI = require("./routes/register.route");
 const historyAPI = require("./routes/history.route");
